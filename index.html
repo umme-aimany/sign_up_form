@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGN UP</title>
+</head>
+<body style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhdDp2EfhkBACDmI-ql1d5omjfXElKTmABkXyNx6TcrQ&s);background-repeat: no-repeat;background-size: cover;">
+    <h1 style="color: blue;margin-left: 300px;text-shadow: 2px 2px 5px black;">
+        SIGN UP FORM
+    </h1>
+    <form style="margin-top: 100px;" id="form">
+        <div style="color: whitesmoke;margin-left: 300px;">
+            USER NAME:
+            <input  style="color: white;border-radius: 10px;"type="text" required="required" id="name">
+        </div>
+        <br>
+        <div style="color: whitesmoke;margin-left: 300px;">
+            EMAIL:
+            <input style="margin-left: 40px;border-radius: 10px;" type="email" required="required" id="email">
+        </div>
+        <br>
+        <div style="color: whitesmoke;margin-left: 300px;">
+            PASSWORD:
+            <input  style="margin-left: 6px;border-radius: 10px;"    type="password" required="required" id="password">
+        </div>
+        <br>
+        <div style="color: whitesmoke;margin-left: 450px;">
+            <input  type="submit" onclick="displayValues(event)">
+        </div>
+        
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+        function displayValues(event) {
+            event.preventDefault(); 
+
+            let name = document.getElementById('name').value;
+            let email = document.getElementById('email').value;
+            let password = document.getElementById('password').value;
+
+            let resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = `
+                <p  style="color: blue;margin-left: 300px;">USER NAME: ${name}</p>
+                <p style="color: blue;margin-left: 300px;">EMAIL: ${email}</p>
+                <p style="color: blue;margin-left: 300px;">PASSWORD: ${password}</p>
+            `;
+
+            console.log(name);
+            console.log(email);
+            console.log(password);
+        }
+    </script>
+</body>
+</html>
